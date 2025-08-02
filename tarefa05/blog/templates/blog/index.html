@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>Postagens recentes</h2>
+    <ul>
+    {% for post in posts %}
+        <li>
+            <a href="{% url 'post_detail' post.id %}">
+                <strong>{{ post.titulo }}</strong> - {{ post.data_publicacao }}
+            </a>
+        </li>
+    {% empty %}
+        <li>Nenhum post encontrado.</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

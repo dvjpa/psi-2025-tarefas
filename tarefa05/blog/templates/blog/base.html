@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Blog</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'index' %}">Meu Blog</a></h1>
+        <hr>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <hr>
+        <p>Desenvolvido por João Paulo - IFRN</p>
+    </footer>
+</body>
+</html>
